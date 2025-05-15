@@ -1,327 +1,381 @@
+<!-- ✅ FULLY ENHANCED projects.html WITH ALL PROJECT CARDS -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Projects | Seth Opatz</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fadeIn: "fadeIn 1s ease-in-out",
+            slideUp: "slideUp 1s ease-out forwards"
+          },
+          keyframes: {
+            fadeIn: {
+              "0%": { opacity: 0 },
+              "100%": { opacity: 1 }
+            },
+            slideUp: {
+              "0%": { opacity: 0, transform: "translateY(40px)" },
+              "100%": { opacity: 1, transform: "translateY(0)" }
+            }
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body id="top" class="bg-gray-900 text-gray-100">
+<body class="bg-gray-900 text-gray-100">
 
-  <nav class="flex justify-between items-center p-6 bg-gray-800">
-    <h1 class="text-3xl font-bold">Seth Opatz</h1>
-    <div class="space-x-4">
-      <a href="index.html" class="hover:text-yellow-400">Home</a>
-      <a href="about.html" class="hover:text-yellow-400">About</a>
-      <a href="projects.html" class="hover:text-yellow-400">Projects</a>
-      <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+  <nav class="flex justify-between items-center p-6 bg-gray-800 shadow-lg">
+    <h1 class="text-3xl font-bold text-white hover:text-yellow-400 transition duration-300">Seth Opatz</h1>
+    <div class="space-x-4 text-lg">
+      <a href="index.html" class="hover:text-yellow-400 transition duration-300">Home</a>
+      <a href="about.html" class="hover:text-yellow-400 transition duration-300">About</a>
+      <a href="projects.html" class="text-yellow-400 font-semibold">Projects</a>
+      <a href="contact.html" class="hover:text-yellow-400 transition duration-300">Contact</a>
     </div>
   </nav>
 
-  <section class="max-w-5xl mx-auto mt-12 px-4">
-    <h2 class="text-4xl font-bold mb-6">Projects</h2>
-    <div class="flex space-x-4 mb-8">
-      <a href="#software-projects" class="bg-gray-800 text-yellow-400 px-4 py-2 rounded hover:bg-gray-700">Software Projects</a>
-      <a href="#gis-projects" class="bg-gray-800 text-yellow-400 px-4 py-2 rounded hover:bg-gray-700">GIS Projects</a>
-      <a href="#stats-projects" class="bg-gray-800 text-yellow-400 px-4 py-2 rounded hover:bg-gray-700">Statistics Projects</a>
-    </div>    
-    <!-- Software Projects -->
-    <h3 id="software-projects" class="text-3xl font-bold text-yellow-400 mt-12 mb-6 scroll-mt-16">Software Projects</h3>
-    <div class="space-y-8">
-      <div class="space-y-8">
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-          <h3 class="text-2xl font-bold">RouteMaster GUI Application</h3>
-          <p class="mt-2">A Python GUI app made for Northern Haserot, a local food service distributor, providing truck route assignment and visualization using customtkinter, tkintermapview, and Treeview with dynamic dropdowns. Includes theming and CSV-driven customer map plotting.</p>
-          <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-          <ul class="list-disc list-inside text-gray-400">
-            <li>Python (Tkinter, CustomTkinter, TkinterMapView)</li>
-            <li>SQL</li>
-          </ul>
-          <div class="flex space-x-4 mt-3">
-            <a href="https://docs.google.com/document/d/1LH2F8eSt-ZdQ2vnOupn6iZ33jodsoaygvrYyrL9S_Mg/edit?usp=sharing" class="text-yellow-400 inline-block">User Guide</a>
-            <a href="https://docs.google.com/document/d/1lrz2xyygmLnDhYItO0d3YE58YY8EgINo92AZZpCVNCw/edit?usp=sharing" class="text-yellow-400 inline-block">View Report</a>
-            <a href="https://github.com/OrionC10/Capstone-49999-Routemaster" class="text-yellow-400 inline-block">View on GitHub</a>
-          </div>
-        </div>
-  
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-          <h3 class="text-2xl font-bold">Nurikabe Puzzle Generator</h3>
-          <p class="mt-2">An interactive Japanese-style logic puzzle built in p5.js with Jest/Puppeteer testing, three different puzzle difficulties, a rules pop-up display, and a functioning hint system.</p>
-          <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-          <ul class="list-disc list-inside text-gray-400">
-            <li>JavaScript (p5.js)</li>
-            <li>Jest</li>
-            <li>Puppeteer</li>
-            <li>HTML/CSS</li>
-          </ul>
-          <div class="flex space-x-4 mt-3">
-            <a href="https://sopatz.github.io/logic_puzzles/puzzleSelect.html" class="text-yellow-400 inline-block">Play</a>
-            <a href="https://github.com/sopatz" class="text-yellow-400 inline-block">View on GitHub</a>
-          </div>
-        </div>
-  
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-          <h3 class="text-2xl font-bold">Sweet Pirate of Mine</h3>
-          <p class="mt-2">A pirate game built in p5.js where you sail the high seas to plunder treasure, slaying monsters that stand in your way. Solve puzzles to open treasure chests and use the money to upgrade your ship!</p>
-          <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-          <ul class="list-disc list-inside text-gray-400">
-            <li>JavaScript (p5.js)</li>
-            <li>Jest</li>
-            <li>Puppeteer</li>
-            <li>HTML/CSS</li>
-          </ul>
-          <div class="flex space-x-4 mt-3">
-            <a href="https://sopatz.github.io/SoftwareEngineering_PersonalFork/Main%20Project/" class="text-yellow-400 inline-block">Play</a>
-            <a href="https://docs.google.com/presentation/d/1_K9qh6ut87nGkYYzGFS1gmyise4RroDlsOVLlozzkNQ/edit?usp=sharing" class="text-yellow-400 inline-block">View Presentation</a>
-            <a href="https://github.com/sopatz/SoftwareEngineering_PersonalFork/tree/main/Main%20Project" class="text-yellow-400 inline-block">View on GitHub</a>
-          </div>
-        </div>
-
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-          <h3 class="text-2xl font-bold">Wordle Assistant</h3>
-          <p class="mt-2">C++ program that suggests wordle guesses to the user based on the current state of the user's puzzle. Can solve the Wordle about 99.7% of the time.</p>
-          <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-          <ul class="list-disc list-inside text-gray-400">
-            <li>C++</li>
-          </ul>
-          <div class="flex space-x-4 mt-3">
-            <a href="https://github.com/sopatz/SoftwareEngineering_PersonalFork/tree/main/Wordle" class="text-yellow-400 inline-block">View on GitHub</a>
-          </div>
-        </div>
-
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-          <h3 class="text-2xl font-bold">PC Part Picker</h3>
-          <p class="mt-2">A program using user preferences to suggest PC parts within a price range. Part info was scraped from the PCPartPicker website.</p>
-          <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-          <ul class="list-disc list-inside text-gray-400">
-            <li>Python</li>
-            <li>Flask</li>
-            <li>Puppeteer</li>
-            <li>TypeScript</li>
-          </ul>
-          <div class="flex space-x-4 mt-3">
-            <a href="https://docs.google.com/document/d/19wyf6YOjLMTmDNwqHPvQBLQt9Vc0TKcP/edit?usp=sharing&ouid=118443038394264718609&rtpof=true&sd=true" class="text-yellow-400 inline-block">View Report</a>
-            <a href="https://github.com/OrionC10/PC-part-picker" class="text-yellow-400 inline-block">View on GitHub</a>
-          </div>
-        </div>
-
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-          <h3 class="text-2xl font-bold">Popcorn</h3>
-          <p class="mt-2">Video streaming service that stores user info in a database for a personalized experience. Each user has their own watchlist and their own theme for visuals. No longer has access to the server where user data was stored, so it no longer runs, but the demo below shows how it ran when it was functional.</p>
-          <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-          <ul class="list-disc list-inside text-gray-400">
-            <li>PHP</li>
-            <li>phpMyAdmin</li>
-            <li>SQL</li>
-            <li>HTML/CSS</li>
-          </ul><div class="flex space-x-4 mt-3">
-            <a href="" class="text-yellow-400 inline-block">View Demo</a>      <!-- Put demo video link here -->
-            <a href="https://github.com/sopatz/popcorn" class="text-yellow-400 inline-block">View on GitHub</a>
-          </div>
-        </div>
-  
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-          <h3 class="text-2xl font-bold">Terminal Tic-Tac-Toe</h3>
-          <p class="mt-2">The game "Tic-Tac-Toe" playable in a C++ terminal.</p>
-          <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-          <ul class="list-disc list-inside text-gray-400">
-            <li>C++</li>
-          </ul>
-          <div class="flex space-x-4 mt-3">
-            <a href="https://github.com/sopatz/TTTT" class="text-yellow-400 inline-block">View on GitHub</a>
-          </div>
-        </div>
-    </div>
-    <div class="h-8"></div>
-
-    <!-- GIS Projects -->
-    <div class="mt-12 mb-6 flex items-center justify-between scroll-mt-16" id="gis-projects">
-      <h3 class="text-3xl font-bold text-yellow-400">GIS Projects</h3>
-      <a href="#top" class="text-sm px-3 py-1 bg-gray-800 hover:bg-gray-700 text-yellow-400 rounded">
-        Back to Top ↑
-      </a>
-    </div>
-    <div class="space-y-8">
-      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-bold">Interactive US County Map with City Populations</h3>
-        <p class="mt-2">An interactive county map of the US made using Leaflet, a library of JavaScript specializing in interactive maps. The user can search or click on any county in the US, and the five (or user-specified number, five is the default) largest cities will appear on the map with their locations and populations. Made for my brother with Asperger's Syndrome, who is really interested in US population data and its quirks, and has been to all 88 counties in Ohio.</p>
-        <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-        <ul class="list-disc list-inside text-gray-400">
-          <li>JavaScript (Leaflet)</li>
-          <li>HTML/CSS</li>
-          <li>Python</li>
-          <li>GitHub Actions</li>
-        </ul>
-        <div class="flex space-x-4 mt-3">
-          <a href="https://sopatz.github.io/USCityPopByCounty/" class="text-yellow-400 inline-block">Open</a>
-          <a href="https://github.com/sopatz/USCityPopByCounty" class="text-yellow-400 inline-block">View on GitHub</a>
-        </div>
-      </div>
-
-      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-bold">Automated Watershed Delineator</h3>
-        <p class="mt-2">A Python script that uses ArcPy to automatically delineate watershed boundaries from a DEM raster file provided by the user. The sizes of the generated watersheds can be chosen based on user input.</p>
-        <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-        <ul class="list-disc list-inside text-gray-400">
-          <li>Python (ArcPy)</li>
-        </ul>
-        <div class="flex space-x-4 mt-3">
-          <a href="https://docs.google.com/document/d/1A1rIWziPn-Wl-gMbSRv9aQ2FuiWCe8mQY_W5Mk5Gd3U/edit?usp=sharing" class="text-yellow-400 inline-block">View User Guide</a>
-          <a href="https://github.com/sopatz/spatial_programming" class="text-yellow-400 inline-block">View on GitHub</a>
-        </div>
-      </div>
-
-      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-bold">El Dorado Fire Analysis</h3>
-        <p class="mt-2">Analysis of the impacts of the El Dorado fire, which was sparked by a gender reveal celebration on Sept. 5, 2020 near San Bernardino, California. The burned areas, burn severity, and vegetation loss were mapped and analyzed using Google Earth Engine. The user can click anywhere on the map in Google Earth Engine to generate a NDVI time-series chart at the specified location.</p>
-        <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-        <ul class="list-disc list-inside text-gray-400">
-          <li>Google Earth Engine</li>
-          <li>JavaScript</li>
-        </ul>
-        <div class="flex space-x-4 mt-3">
-          <a href="https://code.earthengine.google.com/7ded5e1cb473008b58709cb2a3ae5d19" class="text-yellow-400 inline-block">View in Google Earth Engine</a>
-          <a href="https://drive.google.com/drive/folders/1N8AR3RpX9RtSxyDy6gkPnN-l6a_-Dp77" class="text-yellow-400 inline-block">View Presentation Materials</a>
-        </div>
-      </div>
-
-      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-bold">Red River Flood Risk Analysis</h3>
-        <p class="mt-2">Hydrology analysis was used to find the census blocks in the Red River Basin that are most at risk of flooding should another major flood of the river occur.</p>
-        <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-        <ul class="list-disc list-inside text-gray-400">
-          <li>ArcGIS Pro</li>
-        </ul>
-        <div class="flex space-x-4 mt-3">
-          <a href="https://drive.google.com/file/d/1YMOGtS9SErB080zwpPHnSKFt7NnoPGty/view?usp=drive_link" class="text-yellow-400 inline-block">View Poster</a>
-        </div>
-      </div>
-
-      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-bold">US Covid Impact Analysis</h3>
-        <p class="mt-2">Hot Spot analysis was performed on CDC Covid Fatalities data to find out where in the US the amount of Covid-related deaths is higher than expected. This produces a map that clearly shows the geospatial trends of Covid impact throughout the US.</p>
-        <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-        <ul class="list-disc list-inside text-gray-400">
-          <li>ArcGIS Pro</li>
-        </ul>
-        <div class="flex space-x-4 mt-3">
-          <a href="https://drive.google.com/file/d/1FPR-AUs4XWd3CMxolXWlylG6oMWJzTat/view?usp=drive_link" class="text-yellow-400 inline-block">View Report</a>
-        </div>
-      </div>
-
-      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-bold">Cleveland Pocket Park Suitability Study</h3>
-        <p class="mt-2">ArcGIS Pro was used to narrow down all the census tracts in Cuyahoga County to the ones most suited for construction of a pocket park.</p>
-        <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-        <ul class="list-disc list-inside text-gray-400">
-          <li>ArcGIS Pro</li>
-        </ul>
-        <div class="flex space-x-4 mt-3">
-          <a href="https://drive.google.com/file/d/1geC-4ORJZJVGNWOZEpIdh1Bgw6Un4C6B/view?usp=drive_link" class="text-yellow-400 inline-block">View Poster</a>
-          <a href="https://drive.google.com/file/d/1vMtDJ9y7lJ8AjrDq-4FAgM9guwB1dYBx/view?usp=drive_link" class="text-yellow-400 inline-block">View Report</a>
-        </div>
-      </div>
-
-      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-bold">Miscellaneous Maps</h3>
-        <p class="mt-2">Map outputs that are not part of a big project.</p>
-        <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-        <ul class="list-disc list-inside text-gray-400">
-          <li>ArcGIS Pro</li>
-          <li>Google Earth Pro</li>
-        </ul>
-        <div class="flex space-x-4 mt-3">
-          <a href="https://drive.google.com/drive/folders/1sRJC7txWwzrj8Psr_J49gGYaYaC_3hwM?usp=drive_link" class="text-yellow-400 inline-block">View Maps</a>
-        </div>
-      </div>
-    </div>
-    <div class="h-8"></div>
-
-    <!-- Statistics Projects -->
-    <div class="mt-12 mb-6 flex items-center justify-between scroll-mt-16" id="stats-projects">
-      <h3 class="text-3xl font-bold text-yellow-400">Statistics Projects</h3>
-      <a href="#top" class="text-sm px-3 py-1 bg-gray-800 hover:bg-gray-700 text-yellow-400 rounded">
-        Back to Top ↑
-      </a>
-    </div>
-    <div class="space-y-8">
-      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-bold">Astral Particle Type Prediction Model</h3>
-        <p class="mt-2">Report comparing the accuracies of QDA and LDA, two discriminant analysis techniques, in differentiating gamma rays from hadron particles in imagery provided to atmospheric telescopes such as the Cherenkov gamma telescope.</p>
-        <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-        <ul class="list-disc list-inside text-gray-400">
-          <li>R</li>
-          <li>R Markdown</li>
-          <li>R Studio</li>
-        </ul>
-        <div class="flex space-x-4 mt-3">
-          <a href="https://drive.google.com/file/d/1Q9qsY_-GHIR9FTAVRLbvDv04t2wxK8Xb/view?usp=drive_link" class="text-yellow-400 inline-block">View Report</a>
-          <a href="https://github.com/sopatz/Statistics/blob/main/Projects/final-project_slearning.Rmd" class="text-yellow-400 inline-block">View R Markdown Code</a>
-        </div>
-      </div>
-
-      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-bold">SMS Spam Detection</h3>
-        <p class="mt-2">Report comparing the accuracy and performance of three different statistical models when it comes to predicting whether SMS text messages will be marked as spam.</p>
-        <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-        <ul class="list-disc list-inside text-gray-400">
-          <li>R</li>
-          <li>R Markdown</li>
-          <li>R Studio</li>
-        </ul>
-        <div class="flex space-x-4 mt-3">
-          <a href="https://drive.google.com/file/d/1MU9pOUQIlWXi914JcQtw9R6yOhjEK-C1/view?usp=drive_link" class="text-yellow-400 inline-block">View Report</a>
-          <a href="https://github.com/sopatz/Statistics/blob/main/Projects/SMS_Spam_DataMining.Rmd" class="text-yellow-400 inline-block">View R Markdown Code</a>
-        </div>
-      </div>
-
-      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-bold">Email Spam Prediction using Logistic Regression</h3>
-        <p class="mt-2">Using a binary logistic model to predict whether an email will be marked as spam based on several factors, such as the occurrence of the word "money", for example.</p>
-        <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-        <ul class="list-disc list-inside text-gray-400">
-          <li>R</li>
-          <li>R Markdown</li>
-          <li>R Studio</li>
-        </ul>
-        <div class="flex space-x-4 mt-3">
-          <a href="https://drive.google.com/file/d/1I8n1cCk8DSX3Nd9_vLad_5g8X22zQjSD/view?usp=drive_link" class="text-yellow-400 inline-block">View Report</a>
-          <a href="https://github.com/sopatz/Statistics/blob/main/Projects/final-project_compstat.Rmd" class="text-yellow-400 inline-block">View R Markdown Code</a>
-        </div>
-      </div>
-
-      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-bold">Eye Color Analysis of Couples</h3>
-        <p class="mt-2">Report using R to determine the proportion of males that choose partners with the same eye color as themselves.</p>
-        <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-        <ul class="list-disc list-inside text-gray-400">
-          <li>R</li>
-          <li>R Markdown</li>
-          <li>R Studio</li>
-        </ul>
-        <div class="flex space-x-4 mt-3">
-          <a href="https://drive.google.com/file/d/1YH7BNZHBoPGmS-lSAzLNlnfIfbqAgzxp/view?usp=drive_link" class="text-yellow-400 inline-block">View Report</a>
-          <a href="https://github.com/sopatz/Statistics/blob/main/Projects/NA_poverty_project.Rmd" class="text-yellow-400 inline-block">View R Markdown Code</a>
-        </div>
-      </div>
-
-      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-bold">North American Poverty Analysis</h3>
-        <p class="mt-2">A report using a multiple linear regression model on 2015 American Community Survey data to predict the poverty level of each geographic subregion in North America.</p>
-        <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
-        <ul class="list-disc list-inside text-gray-400">
-          <li>R</li>
-          <li>R Markdown</li>
-          <li>R Studio</li>
-        </ul>
-        <div class="flex space-x-4 mt-3">
-          <a href="https://drive.google.com/file/d/1Oiup1JrSryOYZZ9y8-P4fSgZdlIjeeUe/view?usp=drive_link" class="text-yellow-400 inline-block">View Report</a>
-          <a href="https://github.com/sopatz/Statistics/blob/main/Projects/NA_poverty_project.Rmd" class="text-yellow-400 inline-block">View R Markdown Code</a>
-        </div>
-      </div>
+  <section class="max-w-6xl mx-auto mt-12 px-4 animate-fadeIn">
+    <h2 class="text-4xl font-bold mb-6 text-yellow-300 text-center">Projects</h2>
+    <div class="flex flex-wrap gap-4 justify-center mb-8">
+      <a href="#software-projects" class="bg-gray-800 text-yellow-400 px-4 py-2 rounded hover:bg-gray-700 transition duration-300">Software Projects</a>
+      <a href="#gis-projects" class="bg-gray-800 text-yellow-400 px-4 py-2 rounded hover:bg-gray-700 transition duration-300">GIS Projects</a>
+      <a href="#stats-projects" class="bg-gray-800 text-yellow-400 px-4 py-2 rounded hover:bg-gray-700 transition duration-300">Statistics Projects</a>
     </div>
 
+    <style>
+      .project-card {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease-out;
+      }
+      .project-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+
+    <div id="project-blocks" class="space-y-12">
+
+<!-- CATEGORY HEADING: Software Projects -->
+<div id="software-projects" class="mt-20 mb-6 flex items-center justify-between scroll-mt-20 max-w-4xl mx-auto">
+  <h3 class="text-3xl font-bold text-yellow-300">Software Projects</h3>
+  <a href="#" class="text-sm px-3 py-1 bg-gray-800 hover:bg-gray-700 text-yellow-400 rounded">Back to Top ↑</a>
+</div>
+
+      <!-- All project cards inserted here -->
+      <!-- BEGIN: Inserted cards -->
+
+<!-- RESTORED PROJECT CARD: RouteMaster GUI Application -->
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">RouteMaster GUI Application</h3>
+  <p class="mt-2 text-gray-300">A Python GUI app made for Northern Haserot, a local food service distributor, providing truck route assignment and visualization using customtkinter, tkintermapview, and Treeview with dynamic dropdowns. Includes theming and CSV-driven customer map plotting.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>Python (Tkinter, CustomTkinter, TkinterMapView)</li>
+    <li>SQL</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://docs.google.com/document/d/1LH2F8eSt-ZdQ2vnOupn6iZ33jodsoaygvrYyrL9S_Mg/edit?usp=sharing" class="text-yellow-400 hover:underline">User Guide</a>
+    <a href="https://docs.google.com/document/d/1lrz2xyygmLnDhYItO0d3YE58YY8EgINo92AZZpCVNCw/edit?usp=sharing" class="text-yellow-400 hover:underline">View Report</a>
+    <a href="https://github.com/OrionC10/Capstone-49999-Routemaster" class="text-yellow-400 hover:underline">GitHub</a>
+  </div>
+</div>
+
+<!-- SOFTWARE PROJECTS -->
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">Nurikabe Puzzle Generator</h3>
+  <p class="mt-2 text-gray-300">An interactive Japanese-style logic puzzle with multiple difficulty levels, rules display, and hint system.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>JavaScript (p5.js)</li>
+    <li>Jest</li>
+    <li>Puppeteer</li>
+    <li>HTML/CSS</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://sopatz.github.io/logic_puzzles/puzzleSelect.html" class="text-yellow-400 hover:underline">Play</a>
+    <a href="https://github.com/sopatz" class="text-yellow-400 hover:underline">GitHub</a>
+  </div>
+</div>
+
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">Sweet Pirate of Mine</h3>
+  <p class="mt-2 text-gray-300">A pirate game built in p5.js with puzzle-solving and upgrade mechanics.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>JavaScript (p5.js)</li>
+    <li>Jest</li>
+    <li>Puppeteer</li>
+    <li>HTML/CSS</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://sopatz.github.io/SoftwareEngineering_PersonalFork/Main%20Project/" class="text-yellow-400 hover:underline">Play</a>
+    <a href="https://github.com/sopatz/SoftwareEngineering_PersonalFork/tree/main/Main%20Project" class="text-yellow-400 hover:underline">GitHub</a>
+  </div>
+</div>
+
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">Wordle Assistant</h3>
+  <p class="mt-2 text-gray-300">C++ program that intelligently guesses Wordle solutions with high accuracy.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>C++</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://github.com/sopatz/SoftwareEngineering_PersonalFork/tree/main/Wordle" class="text-yellow-400 hover:underline">GitHub</a>
+  </div>
+</div>
+
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">PC Part Picker</h3>
+  <p class="mt-2 text-gray-300">Suggests PC parts based on user preferences. Uses web scraping and price filtering.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>Python</li>
+    <li>Flask</li>
+    <li>Puppeteer</li>
+    <li>TypeScript</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://github.com/OrionC10/PC-part-picker" class="text-yellow-400 hover:underline">GitHub</a>
+  </div>
+</div>
+
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">Popcorn</h3>
+  <p class="mt-2 text-gray-300">Streaming service with watchlists and user personalization. Demo offline, but source available.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>PHP</li>
+    <li>phpMyAdmin</li>
+    <li>SQL</li>
+    <li>HTML/CSS</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://github.com/sopatz/popcorn" class="text-yellow-400 hover:underline">GitHub</a>
+  </div>
+</div>
+
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">Terminal Tic-Tac-Toe</h3>
+  <p class="mt-2 text-gray-300">Classic Tic-Tac-Toe game playable in a C++ terminal interface.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>C++</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://github.com/sopatz/TTTT" class="text-yellow-400 hover:underline">GitHub</a>
+  </div>
+</div>
+<div class="h-8"></div>
+
+<!-- CATEGORY HEADING: GIS Projects -->
+<div id="gis-projects" class="mt-20 mb-6 flex items-center justify-between scroll-mt-20 max-w-4xl mx-auto">
+  <h3 class="text-3xl font-bold text-yellow-300">GIS Projects</h3>
+  <a href="#" class="text-sm px-3 py-1 bg-gray-800 hover:bg-gray-700 text-yellow-400 rounded">Back to Top ↑</a>
+</div>
+
+<!-- GIS PROJECTS -->
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">Interactive US County Map</h3>
+  <p class="mt-2 text-gray-300">Interactive Leaflet map showing the top five cities in every US county by population with clickable features.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>JavaScript (Leaflet)</li>
+    <li>HTML/CSS</li>
+    <li>Python</li>
+    <li>GitHub Actions</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://sopatz.github.io/USCityPopByCounty/" class="text-yellow-400 hover:underline">Live Site</a>
+    <a href="https://github.com/sopatz/USCityPopByCounty" class="text-yellow-400 hover:underline">GitHub</a>
+  </div>
+</div>
+
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">Automated Watershed Delineator</h3>
+  <p class="mt-2 text-gray-300">Script using ArcPy to delineate watershed boundaries from DEM rasters based on user-defined sizes.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>Python (ArcPy)</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://github.com/sopatz/spatial_programming" class="text-yellow-400 hover:underline">GitHub</a>
+  </div>
+</div>
+
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">El Dorado Fire Analysis</h3>
+  <p class="mt-2 text-gray-300">Mapped burn severity and NDVI vegetation loss using Google Earth Engine, with click-to-chart NDVI tool.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>Google Earth Engine</li>
+    <li>JavaScript</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://code.earthengine.google.com/7ded5e1cb473008b58709cb2a3ae5d19" class="text-yellow-400 hover:underline">View App</a>
+    <a href="https://drive.google.com/drive/folders/1N8AR3RpX9RtSxyDy6gkPnN-l6a_-Dp77" class="text-yellow-400 hover:underline">View Presentation Materials</a>
+  </div>
+</div>
+
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">Red River Flood Risk Analysis</h3>
+  <p class="mt-2 text-gray-300">Hydrology-based flood risk modeling of Red River Basin census blocks.Hydrology-based flood risk modeling of Red River Basin census blocks.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>ArcGIS Pro</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://drive.google.com/file/d/1YMOGtS9SErB080zwpPHnSKFt7NnoPGty/view?usp=drive_link" class="text-yellow-400 hover:underline">View Report</a>
+  </div>
+</div>
+
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">US Covid Impact Analysis</h3>
+  <p class="mt-2 text-gray-300">Hot Spot Analysis using CDC Places COVID-19 fatality data to identify areas in the U.S. with significantly higher-than-expected death rates. The resulting map reveals clear geospatial trends in COVID-19 impact across the country.</p>
+  <p class="mt-3 font-semibold text-gray-300">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>ArcGIS Pro</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://drive.google.com/file/d/1FPR-AUs4XWd3CMxolXWlylG6oMWJzTat/view?usp=drive_link" class="text-yellow-400 hover:underline">View Report</a>
+  </div>
+</div>
+
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">Cleveland Pocket Park Study</h3>
+  <p class="mt-2 text-gray-300">Suitability analysis of census tracts for urban pocket park development using GIS criteria filtering.Suitability analysis of census tracts for urban pocket park development using GIS criteria filtering.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>ArcGIS Pro</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://drive.google.com/file/d/1geC-4ORJZJVGNWOZEpIdh1Bgw6Un4C6B/view?usp=drive_link" class="text-yellow-400 hover:underline">View Poster</a>
+    <a href="https://drive.google.com/file/d/1vMtDJ9y7lJ8AjrDq-4FAgM9guwB1dYBx/view?usp=drive_link" class="text-yellow-400 hover:underline">View Report</a>
+  </div>
+</div>
+
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">Miscellaneous Maps</h3>
+  <p class="mt-2 text-gray-300">A collection of smaller maps and visualizations created in GIS tools.A collection of smaller maps and visualizations created in GIS tools.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>ArcGIS Pro</li>
+    <li>Google Earth Pro</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://drive.google.com/drive/folders/1sRJC7txWwzrj8Psr_J49gGYaYaC_3hwM?usp=drive_link" class="text-yellow-400 hover:underline">View Folder</a>
+  </div>
+</div>
+<div class="h-8"></div>
+
+<!-- CATEGORY HEADING: Statistics Projects -->
+<div id="stats-projects" class="mt-20 mb-6 flex items-center justify-between scroll-mt-20 max-w-4xl mx-auto">
+  <h3 class="text-3xl font-bold text-yellow-300">Statistics Projects</h3>
+  <a href="#" class="text-sm px-3 py-1 bg-gray-800 hover:bg-gray-700 text-yellow-400 rounded">Back to Top ↑</a>
+</div>
+
+<!-- STATISTICS PROJECTS -->
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">Astral Particle Type Prediction</h3>
+  <p class="mt-2 text-gray-300">Used QDA and LDA to classify gamma rays vs. hadron particles in telescope data. in telescope data.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>R</li>
+    <li>R Markdown</li>
+    <li>R Studio</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://drive.google.com/file/d/1Q9qsY_-GHIR9FTAVRLbvDv04t2wxK8Xb/view?usp=drive_link" class="text-yellow-400 hover:underline">View Report</a>
+    <a href="https://github.com/sopatz/Statistics/blob/main/Projects/final-project_slearning.Rmd" class="text-yellow-400 hover:underline">R Markdown Code</a>
+  </div>
+</div>
+
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">SMS Spam Detection</h3>
+  <p class="mt-2 text-gray-300">Compared different statistical models for classifying spam messages. statistical models for classifying spam messages.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>R</li>
+    <li>R Markdown</li>
+    <li>R Studio</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://drive.google.com/file/d/1MU9pOUQIlWXi914JcQtw9R6yOhjEK-C1/view?usp=drive_link" class="text-yellow-400 hover:underline">View Report</a>
+    <a href="https://github.com/sopatz/Statistics/blob/main/Projects/SMS_Spam_DataMining.Rmd" class="text-yellow-400 hover:underline">R Markdown Code</a>
+  </div>
+</div>
+
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">Email Spam Prediction</h3>
+  <p class="mt-2 text-gray-300">Predicted email spam likelihood with logistic regression on word frequency data. spam likelihood with logistic regression on word frequency data.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>R</li>
+    <li>R Markdown</li>
+    <li>R Studio</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://drive.google.com/file/d/1I8n1cCk8DSX3Nd9_vLad_5g8X22zQjSD/view?usp=drive_link" class="text-yellow-400 hover:underline">View Report</a>
+    <a href="https://github.com/sopatz/Statistics/blob/main/Projects/final-project_compstat.Rmd" class="text-yellow-400 hover:underline">R Markdown Code</a>
+  </div>
+</div>
+
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">Eye Color Analysis of Couples</h3>
+  <p class="mt-2 text-gray-300">Analyzed whether male partners tend to select partners with similar eye color. whether male partners tend to select partners with similar eye color.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>R</li>
+    <li>R Markdown</li>
+    <li>R Studio</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://drive.google.com/file/d/1YH7BNZHBoPGmS-lSAzLNlnfIfbqAgzxp/view?usp=drive_link" class="text-yellow-400 hover:underline">View Report</a>
+    <a href="https://github.com/sopatz/Statistics/blob/main/Projects/NA_poverty_project.Rmd" class="text-yellow-400 hover:underline">R Markdown Code</a>
+  </div>
+</div>
+
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h3 class="text-2xl font-bold text-yellow-200">North American Poverty Analysis</h3>
+  <p class="mt-2 text-gray-300">Built a multiple linear regression model on ACS data to predict poverty by subregion. a multiple linear regression model on ACS data to predict poverty by subregion.</p>
+  <p class="mt-3 font-semibold text-gray-400">Tools Used:</p>
+  <ul class="list-disc list-inside text-gray-400">
+    <li>R</li>
+    <li>R Markdown</li>
+    <li>R Studio</li>
+  </ul>
+  <div class="flex flex-wrap gap-4 mt-4">
+    <a href="https://drive.google.com/file/d/1Oiup1JrSryOYZZ9y8-P4fSgZdlIjeeUe/view?usp=drive_link" class="text-yellow-400 hover:underline">View Report</a>
+    <a href="https://github.com/sopatz/Statistics/blob/main/Projects/NA_poverty_project.Rmd" class="text-yellow-400 hover:underline">R Markdown Code</a>
+  </div>
+</div>
+
     </div>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      window.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.project-card').forEach(card => {
+          observer.observe(card);
+        });
+      });
+    </script>
+
+    <div class="h-24"></div>
   </section>
-  <div class="h-16"></div>
 </body>
 </html>

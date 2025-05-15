@@ -4,82 +4,106 @@
   <meta charset="UTF-8">
   <title>About | Seth Opatz</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fadeIn: "fadeIn 1s ease-in forwards",
+            float: "float 3s ease-in-out infinite"
+          },
+          keyframes: {
+            fadeIn: {
+              "0%": { opacity: 0 },
+              "100%": { opacity: 1 }
+            },
+            float: {
+              "0%, 100%": { transform: "translateY(0)" },
+              "50%": { transform: "translateY(-5px)" }
+            }
+          }
+        }
+      }
+    }
+  </script>
 </head>
 <body class="bg-gray-900 text-gray-100">
 
-  <nav class="flex justify-between items-center p-6 bg-gray-800">
-    <h1 class="text-3xl font-bold">Seth Opatz</h1>
-    <div class="space-x-4">
-      <a href="index.html" class="hover:text-yellow-400">Home</a>
-      <a href="about.html" class="hover:text-yellow-400">About</a>
-      <a href="projects.html" class="hover:text-yellow-400">Projects</a>
-      <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+  <!-- NAVIGATION -->
+  <nav class="flex justify-between items-center p-6 bg-gray-800 shadow-lg">
+    <h1 class="text-3xl font-bold text-white hover:text-yellow-400 transition duration-300">Seth Opatz</h1>
+    <div class="space-x-4 text-lg">
+      <a href="index.html" class="hover:text-yellow-400 transition duration-300">Home</a>
+      <a href="about.html" class="text-yellow-400 font-semibold">About</a>
+      <a href="projects.html" class="hover:text-yellow-400 transition duration-300">Projects</a>
+      <a href="contact.html" class="hover:text-yellow-400 transition duration-300">Contact</a>
     </div>
   </nav>
 
-  <section class="max-w-3xl mx-auto mt-12 px-4">
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
-      <img src="images/beach.jpg" alt="Seth" class="rounded-lg">
-      <img src="images/mn_log.jpg" alt="Seth" class="rounded-lg">
-      <img src="images/squat_look_away.jpg" alt="Seth" class="rounded-lg">
+  <!-- MAIN CONTENT -->
+  <section class="max-w-4xl mx-auto mt-12 px-4 animate-fadeIn">
+    
+    <!-- IMAGE GRID -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+      <img src="images/beach.jpg" alt="Seth" class="rounded-lg shadow-lg hover:scale-105 transition duration-300">
+      <img src="images/mn_log.jpg" alt="Seth" class="rounded-lg shadow-lg hover:scale-105 transition duration-300">
+      <img src="images/squat_look_away.jpg" alt="Seth" class="rounded-lg shadow-lg hover:scale-105 transition duration-300">
     </div>
-    <br><br>
-    <div>
-      <h2 class="text-4xl font-bold mb-6">About Me</h2>
-      <p class="text-lg leading-relaxed">
+
+    <!-- ABOUT TEXT -->
+    <div class="mt-12">
+      <h2 class="text-4xl font-bold mb-6 text-yellow-300">About Me</h2>
+      <p class="text-lg leading-relaxed text-gray-300">
         I’m currently pursuing a Bachelor of Science in Computer Science at Kent State University, with a concentration in Data Engineering. I also hold an Associate's Degree in Science and minors in Applied Statistics and Geographic Information Science.
         <br><br>
         I enjoy problem-solving, coding projects, and exploring data-driven solutions in both traditional and geospatial contexts. I'm experienced in C++, Python, R, JavaScript, HTML/CSS, Esri tools, and Google Earth Engine.
-        <br>
-        <!-- Skills + image -->
-        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-          <!-- Text column -->
-          <div>
-            <h3 class="text-2xl font-bold mb-4">Skills</h3>
-            <ul class="list-disc list-inside space-y-1">
-              <li>C++, Python, R, JavaScript, HTML/CSS, PHP, SQL</li>
-              <li>Esri (ArcGIS Pro, etc.), ArcPy, Google Earth Engine</li>
-              <li>Problem-Solving &amp; Data Analysis</li>
-              <li>Computer Literacy &amp; Critical Thinking</li>
-            </ul>
-          </div>
-          <!-- Image column -->
-          <div>
-            <img
-              src="images/mn_table.jpg"
-              alt="Seth in Minnesota"
-              class="w-full h-auto rounded-2xl shadow-lg object-cover"
-            >
-          </div>
-        </div>
-
-        <!-- Honors + image -->
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-          <!-- Text column -->
-          <div>
-            <h3 class="text-2xl font-bold mb-4">Honors</h3>
-            <ul class="list-disc list-inside space-y-1">
-              <li>Kent State University GPA: 3.91</li>
-              <li>4× Dean’s List, 1× President’s List</li>
-              <li>Kent State University Scholarship</li>
-              <li>Kent Promise Scholarship</li>
-              <li>Academic Achievement Scholarship</li>
-              <li>Founders Scholar Program Scholarship</li>
-              <li>Flash Access Grant</li>
-            </ul>
-          </div>
-          <!-- Image column -->
-          <div>
-            <img
-              src="images/laptop_looker.jpg"
-              alt="Seth coding on a laptop"
-              class="w-full h-auto rounded-2xl shadow-lg object-cover"
-            >
-          </div>
-        </div>
       </p>
     </div>
+
+    <!-- SKILLS SECTION -->
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h3 class="text-2xl font-bold mb-4 text-yellow-200">Skills</h3>
+        <ul class="list-disc list-inside space-y-2 text-gray-300">
+          <li>C++, Python, R, JavaScript, HTML/CSS, PHP, SQL</li>
+          <li>Esri (ArcGIS Pro, etc.), ArcPy, Google Earth Engine</li>
+          <li>Problem-Solving &amp; Data Analysis</li>
+          <li>Computer Literacy &amp; Critical Thinking</li>
+        </ul>
+      </div>
+      <div>
+        <img
+          src="images/mn_table.jpg"
+          alt="Seth in Minnesota"
+          class="w-full h-auto rounded-2xl shadow-xl object-cover hover:scale-105 transition duration-300"
+        >
+      </div>
+    </div>
+
+    <!-- HONORS SECTION -->
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h3 class="text-2xl font-bold mb-4 text-yellow-200">Honors</h3>
+        <ul class="list-disc list-inside space-y-2 text-gray-300">
+          <li>Kent State University GPA: 3.91</li>
+          <li>4× Dean’s List, 1× President’s List</li>
+          <li>Kent State University Scholarship</li>
+          <li>Kent Promise Scholarship</li>
+          <li>Academic Achievement Scholarship</li>
+          <li>Founders Scholar Program Scholarship</li>
+          <li>Flash Access Grant</li>
+        </ul>
+      </div>
+      <div>
+        <img
+          src="images/laptop_looker.jpg"
+          alt="Seth coding on a laptop"
+          class="w-full h-auto rounded-2xl shadow-xl object-cover hover:scale-105 transition duration-300"
+        >
+      </div>
+    </div>
   </section>
-<div class="h-16"></div>
+
+  <div class="h-16"></div>
 </body>
 </html>
