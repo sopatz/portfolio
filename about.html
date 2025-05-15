@@ -18,32 +18,68 @@
   </nav>
 
   <section class="max-w-3xl mx-auto mt-12 px-4">
-    <h2 class="text-4xl font-bold mb-6">About Me</h2>
-    <p class="text-lg leading-relaxed">
-      I’m currently pursuing a Bachelor of Science in Computer Science at Kent State University, with a concentration in Data Engineering. I also hold an Associate's Degree in Science and minors in Applied Statistics and Geographic Information Science.
-      <br><br>
-      I enjoy problem-solving, coding projects, and exploring data-driven solutions in both traditional and geospatial contexts. I'm experienced in C++, Python, R, JavaScript, HTML/CSS, Esri tools, and Google Earth Engine.
-      <br>
-      <h3 class="text-2xl font-bold mt-8">Skills</h3>
-      <ul class="list-disc list-inside mt-4 space-y-1">
-        <li>C++, Python, R, JavaScript, HTML/CSS, PHP, SQL</li>
-        <li>Esri (ArcGIS Pro, etc.), ArcPy, Google Earth Engine</li>
-        <li>Problem-Solving & Data Analysis</li>
-        <li>Computer Literacy & Critical Thinking</li>
-      </ul>
-      <h3 class="text-2xl font-bold mt-8">Honors</h3>
-      <ul class="list-disc list-inside mt-4 space-y-1">
-        <li>Kent State University GPA: 3.91</li>
-        <li>4x Dean's List, 1x President's List</li>
-        <li>Kent State University Scholarship</li>
-        <li>Kent Promise Scholarship</li>
-        <li>Academic Achievement Scholarship></li>
-        <li>Founders Scholar Program Scholarship</li>
-        <li>Flash Access Grant</li>
-      </ul>
-    </p>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+      <img src="images/beach.jpg" alt="Seth" class="rounded-lg">
+      <img src="images/mn_log.jpg" alt="Seth" class="rounded-lg">
+      <img src="images/squat_look_away.jpg" alt="Seth" class="rounded-lg">
+    </div>
+    <br><br>
+    <div>
+      <h2 class="text-4xl font-bold mb-6">About Me</h2>
+      <p class="text-lg leading-relaxed">
+        I’m currently pursuing a Bachelor of Science in Computer Science at Kent State University, with a concentration in Data Engineering. I also hold an Associate's Degree in Science and minors in Applied Statistics and Geographic Information Science.
+        <br><br>
+        I enjoy problem-solving, coding projects, and exploring data-driven solutions in both traditional and geospatial contexts. I'm experienced in C++, Python, R, JavaScript, HTML/CSS, Esri tools, and Google Earth Engine.
+        <br>
+        <!-- Skills + image -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <!-- Text column -->
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Skills</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>C++, Python, R, JavaScript, HTML/CSS, PHP, SQL</li>
+              <li>Esri (ArcGIS Pro, etc.), ArcPy, Google Earth Engine</li>
+              <li>Problem-Solving &amp; Data Analysis</li>
+              <li>Computer Literacy &amp; Critical Thinking</li>
+            </ul>
+          </div>
+          <!-- Image column -->
+          <div>
+            <img
+              src="images/mn_table.jpg"
+              alt="Seth in Minnesota"
+              class="w-full h-auto rounded-2xl shadow-lg object-cover"
+            >
+          </div>
+        </div>
 
+        <!-- Honors + image -->
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <!-- Text column -->
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Honors</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Kent State University GPA: 3.91</li>
+              <li>4× Dean’s List, 1× President’s List</li>
+              <li>Kent State University Scholarship</li>
+              <li>Kent Promise Scholarship</li>
+              <li>Academic Achievement Scholarship</li>
+              <li>Founders Scholar Program Scholarship</li>
+              <li>Flash Access Grant</li>
+            </ul>
+          </div>
+          <!-- Image column -->
+          <div>
+            <img
+              src="images/laptop_looker.jpg"
+              alt="Seth coding on a laptop"
+              class="w-full h-auto rounded-2xl shadow-lg object-cover"
+            >
+          </div>
+        </div>
+      </p>
+    </div>
   </section>
-
+<div class="h-16"></div>
 </body>
 </html>
